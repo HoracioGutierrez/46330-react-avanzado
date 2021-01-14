@@ -1,0 +1,24 @@
+Patron de diseño pub/sub - observer
+
+npm i -g create-react-app
+create-react-app mi_app
+
+npx create-app-app mi_app
+
+
+https://reactjs.org/blog/2020/08/10/react-v17-rc.html
+
+
+
+src/
+    |_index.js
+    |_ui/
+        |_layout/
+            |_App.js
+            |_Header.js
+            |_Main.js
+            |_Footer.js
+        |_componentes/
+        |_paginas/
+    |_api/
+        

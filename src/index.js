@@ -1,17 +1,48 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from "./ui/layout/App"
+
+/* 
+const App = function(){
+    return(
+        <div>
+            <p>Parrafo 1</p>
+            <p>Parrafo 2</p>
+        </div>
+    )
+}
+ */
+
+
+/* const App = function(){
+    return(
+        <>
+            <p>Parrafo 1</p>
+            <p>Parrafo 2</p>
+        </>
+    )
+}
+ */
+
+/* const usuarios = [
+    {id:1,nombre:"Horacio"},
+    {id:2,nombre:"Juan"},
+    {id:3,nombre:"Ana"}
+]
+
+ 
+const App = function(){
+    return(
+        <>
+        {usuarios.map(usuario=>{
+            return ( <p key={usuario.id}>{usuario}</p> )
+        })}
+        </>
+    )
+}
+ */
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    <App/>,
+    document.getElementById("root")
+)
