@@ -7,6 +7,7 @@ npx create-app-app mi_app
 
 
 https://reactjs.org/blog/2020/08/10/react-v17-rc.html
+https://es.wikipedia.org/wiki/Reactor_(patr%C3%B3n_de_dise%C3%B1o)
 
 
 
@@ -20,5 +21,20 @@ src/
             |_Footer.js
         |_componentes/
         |_paginas/
+            |_Home.js
+            |_Productos.js
+            |_Cuenta.js
+            |_Carrito.js
     |_api/
+        |_store.js
+        |_reducer.js
+        |_actions.js
         
+
+REDUX : 
+    - store : Simi state - es el lugar donde tengo la info
+    - actions : funcion pura que determina el cambio
+    - reducer : funcion pura que calcula el nuevo estado
+
+REACT-REDUX : 
+    
