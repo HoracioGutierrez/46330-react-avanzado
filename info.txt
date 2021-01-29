@@ -8,7 +8,7 @@ npx create-app-app mi_app
 
 https://reactjs.org/blog/2020/08/10/react-v17-rc.html
 https://es.wikipedia.org/wiki/Reactor_(patr%C3%B3n_de_dise%C3%B1o)
-
+https://javascript.info/currying-partials
 
 
 src/
@@ -20,6 +20,7 @@ src/
             |_Main.js
             |_Footer.js
         |_componentes/
+            |_Contador.js
         |_paginas/
             |_Home.js
             |_Productos.js
@@ -37,4 +38,48 @@ REDUX :
     - reducer : funcion pura que calcula el nuevo estado
 
 REACT-REDUX : 
-    
+    - Provider : 
+    - connect (HoC) :
+
+
+        const mapStatetoProps = () => {}
+
+        const mapDispatchToProps = () => {}
+
+
+        connect(mapStatetoProps,mapDispatchToProps)
+
+    - Hooks
+
+
+
+
+
+REST/SPREAD (...)
+
+
+function foo(...parametros){
+    //Agarra valores sueltos y los mete en un iterable
+    console.log(parametros) //[1,2,3]
+}
+
+foo(1,2,3)
+
+
+
+
+const arr = [1,2,3]
+
+const copia = [arr] //[[1,2,3]]
+const copia = [...arr]
+
+
+const obj = {x:1,y:2,z:3}
+
+const copia = {obj}  //{obj:{}}
+const copia = {...obj}
+
+
+redux-thunk 
+
+redux-saga : Generator Function
