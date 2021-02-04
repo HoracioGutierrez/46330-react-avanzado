@@ -1,0 +1,12 @@
+{
+  "tareas": [
+    {
+      "tarea": "primer tarea",
+      "id": 1
+    },
+    {
+      "tarea": "segunda tarea",
+      "id": 2
+    }
+  ]
+}

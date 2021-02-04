@@ -2,12 +2,48 @@ const estadoInicial = {
     links : ["productos","carrito","cuenta"],
     contador : 0,
     valor : "",
-    tareas : []
+    tareas : [],
+    enviando : false
 }
 
 
 const reducer = (estadoPrevio=estadoInicial,action) => {
     switch(action.type){
+
+        case "TAREA_BORRAR" : 
+            return {
+                ...estadoPrevio,
+                tareas : estadoPrevio.tareas.filter(task => task.id !== action.id)
+            }
+
+        case "TAREA_ENVIANDO" :
+            return {
+                ...estadoPrevio,
+                enviando : true
+            }
+
+        case "TAREA_SUCESS" :
+
+            return {
+                ...estadoPrevio,
+                valor : "",
+                enviando : false,
+                tareas : [
+                    ...estadoPrevio.tareas,
+                    action.res
+                ]
+            }
+
+            /* 
+            const nuevasTareas = estadoPrevio.tareas.slice(0)
+            const nuevasTareas = [...estadoPrevio.tareas]
+            nuevasTareas.push(action.tarea)
+
+            return {
+                ...estadoPrevio,
+                tareas : nuevasTareas
+            } */
+
         case "INPUT_CHANGE" :
             return {
                 ...estadoPrevio,
