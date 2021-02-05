@@ -10,6 +10,12 @@ const estadoInicial = {
 const reducer = (estadoPrevio=estadoInicial,action) => {
     switch(action.type){
 
+        case "TAREAS_TRAER_SUCCESS" :
+            return {
+                ...estadoPrevio,
+                tareas : action.tareas
+            }
+
         case "TAREA_BORRAR" : 
             return {
                 ...estadoPrevio,
@@ -30,7 +36,7 @@ const reducer = (estadoPrevio=estadoInicial,action) => {
                 enviando : false,
                 tareas : [
                     ...estadoPrevio.tareas,
-                    action.res
+                    action.tarea
                 ]
             }
 

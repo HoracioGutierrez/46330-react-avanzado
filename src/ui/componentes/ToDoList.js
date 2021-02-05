@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from "react-redux"
 import {crearTarea,guardarValor,borrarTarea} from "../../api/actions"
 
-const ToDoList = ({valor,tareas,crearTarea,guardarValor,borrarTarea}) => {
+const ToDoList = ({valor,tareas,enviando,crearTarea,guardarValor,borrarTarea}) => {
 
     const manejarChange = (e) => {
         guardarValor(e.target.value)
@@ -10,6 +10,7 @@ const ToDoList = ({valor,tareas,crearTarea,guardarValor,borrarTarea}) => {
 
     return (
         <div>
+            {enviando ? <p>Creando tarea....</p> : null}
             <input onChange={manejarChange} type="text" value={valor}/>
             <button onClick={()=>crearTarea(valor)}>Agregar Tarea</button>
             <ul>
@@ -24,7 +25,7 @@ const ToDoList = ({valor,tareas,crearTarea,guardarValor,borrarTarea}) => {
     )
 }
 
-const mapStateToProps = ({valor,tareas}) => ({valor,tareas})
+const mapStateToProps = ({valor,tareas,enviando}) => ({valor,tareas,enviando})
 
 const mapDispatchToProps = {crearTarea,guardarValor,borrarTarea}
 

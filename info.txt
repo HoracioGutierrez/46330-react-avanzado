@@ -9,6 +9,7 @@ npx create-app-app mi_app
 https://reactjs.org/blog/2020/08/10/react-v17-rc.html
 https://es.wikipedia.org/wiki/Reactor_(patr%C3%B3n_de_dise%C3%B1o)
 https://javascript.info/currying-partials
+https://www.npmjs.com/package/react-toastify
 
 
 src/

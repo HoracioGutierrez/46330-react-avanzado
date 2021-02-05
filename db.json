@@ -7,6 +7,10 @@
     {
       "tarea": "segunda tarea",
       "id": 2
+    },
+    {
+      "tarea": "tercer tarea",
+      "id": 3
     }
   ]
 }
