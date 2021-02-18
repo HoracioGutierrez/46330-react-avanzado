@@ -1,9 +1,10 @@
-import React from 'react'
-import {connect} from "react-redux"
-import {aumentarContador,resetearContador,restarContador} from "../../api/actions"
-//import {bindActionCreators} from "redux"
+import React , {useContext} from 'react'
+import contexto from "../../api/contexto"
 
-const Contador = ({contador,aumentarContador,restarContador,resetearContador}) => {
+const Contador = () => {
+
+    const {contador,aumentarContador,resetearContador,restarContador} = useContext(contexto)
+
     return (
         <div>
             <p>El contador va : {contador} </p>
@@ -14,17 +15,4 @@ const Contador = ({contador,aumentarContador,restarContador,resetearContador}) =
     )
 }
 
-const mapStateToProps = ({contador}) => ({contador})
-
-const mapDispatchToProps = { aumentarContador , restarContador , resetearContador }
-
-export default connect(mapStateToProps,mapDispatchToProps)(Contador)
-
-
-/*
-const mapDispatchToProps = (dispatch) => ({ 
-    aumentarContador : bindActionCreators(aumentarContador,dispatch), 
-    restarContador : bindActionCreators(restarContador,dispatch) , 
-    resetearContador : bindActionCreators(resetearContador,dispatch)
-}) 
-*/
+export default Contador

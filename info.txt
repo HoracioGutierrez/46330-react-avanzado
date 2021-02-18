@@ -84,3 +84,7 @@ const copia = {...obj}
 redux-thunk 
 
 redux-saga : Generator Function
+
+
+
+CONTEXT API

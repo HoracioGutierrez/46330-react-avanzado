@@ -11,8 +11,11 @@ const Cuenta = () => {
     //const tareas = useSelector(store=>store.tareas)
 
     //Este hook se ejecuta SOLO despues del render inicial (componentDidMount)
-    //Acordate de mostrar efectos de limpieza
     useEffect(()=>{
+
+        /* const intervalo = setInterval(() => {
+            console.log("Nuevo pedido")
+        }, 1000); */
 
         dispatch({type:"TAREAS_TRAER"})
 
@@ -21,6 +24,12 @@ const Cuenta = () => {
         .then(res=>{
             dispatch({type:"TAREAS_TRAER_SUCCESS",tareas:res})
         })
+
+        //Simil componentWillUnmount
+        /* return ()=>{
+            console.log("Unmount")
+            clearInterval(intervalo)
+        } */
 
     },[])
 
@@ -36,3 +45,25 @@ const Cuenta = () => {
 
 //export default connect(null,mapDispatchToProps)(Cuenta)
 export default Cuenta
+
+/* 
+class Cuenta {
+
+    constructor(){
+        super()
+        this.state = {
+            intervalor : false
+        }
+    }
+    
+    componentDidMount(){
+        
+    }
+
+    componentWillUnmount(){
+
+    }
+
+} 
+
+*/

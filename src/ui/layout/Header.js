@@ -1,28 +1,11 @@
-import React from 'react'
+import React , {useContext} from 'react'
 import {NavLink} from "react-router-dom"
-import {connect} from "react-redux"
+import contexto from "../../api/contexto"
 
+const Header = () => {
 
-/* class Header extends React.Component {
-    render(){
-        console.log(this)
-        const {links} = this.props
-        return(
-            <header>
-                <NavLink to="/" exact>
-                    <h1>Mi Ecommerce</h1>
-                </NavLink>
-                <nav>
-                    {links.map( link => <NavLink key={link} to={`/${link}`}>{link}</NavLink> )}
-                </nav>
-            </header>
-        )
-    }
-}
- */
+    const {links} = useContext(contexto)
 
-
-const Header = ({links}) => {
     return (
         <header>
             <NavLink to="/" exact>
@@ -35,7 +18,4 @@ const Header = ({links}) => {
     )
 }
 
-
-const mapStateToProps = ({links}) => ({ links })
-
-export default connect(mapStateToProps)(Header)
+export default Header
