@@ -1,12 +1,16 @@
-import React from 'react'
-import {connect} from "react-redux"
-import {crearTarea,guardarValor,borrarTarea} from "../../api/actions"
+import React , {useContext} from 'react'
+//import {connect} from "react-redux"
+//import {crearTarea,guardarValor,borrarTarea} from "../../api/actions"
+import contexto from "../../api/contexto"
 
-const ToDoList = ({valor,tareas,enviando,crearTarea,guardarValor,borrarTarea}) => {
+const ToDoList = (/* {valor,tareas,enviando,crearTarea,guardarValor,borrarTarea} */) => {
+
+    const {valor,tareas,enviando,crearTarea,guardarValor,borrarTarea} = useContext(contexto)
 
     const manejarChange = (e) => {
         guardarValor(e.target.value)
     }
+    
 
     return (
         <div>
@@ -25,8 +29,10 @@ const ToDoList = ({valor,tareas,enviando,crearTarea,guardarValor,borrarTarea}) =
     )
 }
 
-const mapStateToProps = ({valor,tareas,enviando}) => ({valor,tareas,enviando})
+/* const mapStateToProps = ({valor,tareas,enviando}) => ({valor,tareas,enviando})
 
 const mapDispatchToProps = {crearTarea,guardarValor,borrarTarea}
 
-export default connect(mapStateToProps,mapDispatchToProps)(ToDoList)
+export default connect(mapStateToProps,mapDispatchToProps)(ToDoList) */
+
+export default ToDoList
